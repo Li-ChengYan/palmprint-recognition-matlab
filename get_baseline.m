@@ -1,0 +1,29 @@
+clear;
+close all;
+
+projectRoot = fileparts(mfilename("fullpath"));
+addpath(projectRoot);
+addpath(fullfile(projectRoot, "codeFunction"));
+addpath(fullfile(projectRoot, "codeFunction", "eval"));
+
+cfg = struct( ...
+    "imgPath", fullfile(projectRoot, "data", "example_dataset"), ...
+    "imgForm", "png", ...
+    "datasetType", "PolyU_CF", ...
+    "algorithmName", "MTCC", ...
+    "outputFile", fullfile(projectRoot, "data", "baseline", "PolyU_CF", "MTCC.mat") ...
+);
+
+if ~isfolder(cfg.imgPath)
+    error("get_baseline:InvalidImgPath", ...
+        "cfg.imgPath does not exist: %s. Update cfg.imgPath to your local dataset folder before running get_baseline.m.", ...
+        cfg.imgPath);
+end
+
+[genuine, imposter] = compute_genuine_imposter(cfg);
+
+ensure_directory(fileparts(cfg.outputFile));
+save(cfg.outputFile, "genuine", "imposter");
+
+fprintf("Saved %d genuine scores and %d imposter scores to %s\n", ...
+    numel(genuine), numel(imposter), cfg.outputFile);
