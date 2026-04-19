@@ -2,7 +2,7 @@
 
 MATLAB reproduction of several classical palmprint recognition methods.
 
-This repository contains a personal reimplementation of a set of classical palmprint recognition baselines for study and comparison. It is not an official release from the original paper authors, and method details should be checked against the corresponding papers when exact reproduction matters.
+This repository contains a personal reimplementation of a set of classical palmprint recognition baselines for study and comparison. It is not an official release from the original paper authors, and method details should be checked against the corresponding papers when exact reproduction matters. For the Python version of this project, see [palmprint-recognition-python](https://github.com/Li-ChengYan/palmprint-recognition-python).
 
 The repository focuses on the active evaluation path and one documented benchmark setting:
 
