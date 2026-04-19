@@ -24,6 +24,7 @@ The repository focuses on the active evaluation path and one documented benchmar
 
 - MATLAB R2025a or a compatible version
 - Image Processing Toolbox
+- For publicly available palmprint datasets, please refer to the information collected at [IAPR TC4 Palmprint Datasets](https://iapr-tc4.org/palmprint-datasets/), or search for the corresponding official dataset pages and access instructions.
 
 ## Quick Start
 
