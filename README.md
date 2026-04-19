@@ -1,4 +1,4 @@
-# PalmprintRecognition
+# Palmprint Recognition MATLAB
 
 MATLAB reproduction of several classical palmprint recognition methods.
 
